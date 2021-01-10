@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import Exercise from "../../backend/models/exercise.model";
 
 const Exercise = (props) => (
   <tr>
@@ -10,7 +9,7 @@ const Exercise = (props) => (
     <td>{props.exercise.duration}</td>
     <td>{props.exercise.date.substring(0, 10)}</td>
     <td>
-      <Link to={"/edit" + props.exercise._id}>edit</Link> |{" "}
+      <Link to={"/edit/" + props.exercise._id}>edit</Link> |{" "}
       <a
         href="#"
         onClick={() => {
